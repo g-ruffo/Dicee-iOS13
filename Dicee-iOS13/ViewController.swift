@@ -9,12 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // Interface Builder Outlet connects varriable to storyboard.
+    @IBOutlet weak var diceImageViewOne: UIImageView!
+    @IBOutlet weak var diceImageViewTwo: UIImageView!
+    
+    let dice = [UIImage(imageLiteralResourceName: "DiceOne"),
+     UIImage(imageLiteralResourceName: "DiceTwo"),
+     UIImage(imageLiteralResourceName: "DiceThree"),
+     UIImage(imageLiteralResourceName: "DiceFour"),
+     UIImage(imageLiteralResourceName: "DiceFive"),
+     UIImage(imageLiteralResourceName: "DiceOne")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        randomizeDice()
     }
-
-
+    
+    @IBAction func rollButtonClick(_ sender: UIButton) {
+        randomizeDice()
+    }
+    
+    func randomizeDice() {
+        diceImageViewOne.image = dice.randomElement()
+        diceImageViewTwo.image = dice.randomElement()
+    }
 }
 

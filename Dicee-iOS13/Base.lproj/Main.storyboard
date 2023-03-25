@@ -43,11 +43,18 @@
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sa3-Jn-amo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="diceImageViewOne" destination="DSk-0Z-FQL" id="wLv-Om-Wdo"/>
+                        <outlet property="diceImageViewTwo" destination="Ora-Iu-0jD" id="R4z-bF-YOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
